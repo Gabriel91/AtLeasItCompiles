@@ -3,166 +3,150 @@
   <head>
     <title>Homepage</title>
 
-    <!--Style sheets (Bootstrap first) -->
-
+    <!--Style sheets and script-->
     <link rel="stylesheet" type="text/css" href="css/framework.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.structure.css">
-    <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.theme.css">
-      
-         <script src="jquery/jquery.js"></script>
-         <script src="jquery/jquery-ui.js"></script>
-         <script src="bootstrap/js/bootstrap.js"></script>
-      
-        
-    
-       
-      </head>
+    <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.theme.css">      
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+  </head>
 
-      <body>
-        <!-- Container for Application -->
-        <div id='pageContainer' class='container-fluid'>
-          <!-- Search header row contains search bar and name of app -->
-          <div id='searchHeaderRow' class='row'>
-            <!-- column for search bar -->
-            <div id='searchBarCol' class='col-md-12'>
-              <!-- search input box -->
-              <div id='searchBarInput' class='col-xs-4'>            
-                <!-- input search box -->
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="searchTerm">
-                    <span class="input-group-addon" id="basic-addon2">Keyword</span>
-                  </input>
-                </div>
-              </div>
-              <!-- search bar clicker -->
-              <div id='searchBarClick' class='col-xs-2'>
-                <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" value="Category">
-                    Category
-                    <span class="caret"/>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li>
-                      <a href="#">Action</a>
-                    </li>
-                    <li>
-                      <a href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            
-            <div id='appNameCol' class='col-md-6'>
-              <h2 style="margin-top:auto;padding-left:2em;">Application</h2>
+  <body>
+    <!-- Container for Application -->
+    <div id='pageContainer' class='container-fluid'>
+      <!-- Search header row contains search bar and name of app -->
+      <div id='searchHeaderRow' class='row'>
+        <!-- column for search bar -->
+        <div id='searchBarCol' class='col-md-12'>
+          <!-- search input box -->
+          <div id='searchBarInput' class='col-xs-4'>            
+            <!-- input search box -->
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="searchTerm">
+                <span class="input-group-addon" id="basic-addon2">Keyword</span>
+              </input>
             </div>
-            </div>
-
           </div>
-
-
-
-          <!-- row for main data -->
-          <div id='mainDataRow' class='row'>
-            <!-- main data container -->
-            <div id='mainDataCol' class='col-md-12'>
-              <!-- colum area for left data container -->
-              <div id='leftDataCol' class='col-md-6'>
-                <!-- meter data holder -->
-                <div id='meterData' class='col-md-12'>
-                  <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;background-color:white;margin-left:4em;"></canvas>             
-                </div>
-                  <!-- Nav tabs -->
-                  <ul id="navTabsTitle" class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active">
-                      <a href="#tweet" aria-controls="tweet" role="tab" data-toggle="tab">Related Tweets</a>
-                    </li>
-                    <li role="presentation">
-                      <a href="#myList" aria-controls="myList" role="tab" data-toggle="tab">Watch List</a>
-                    </li>
-                    <li role="presentation">
-                      <a href="#category" aria-controls="category" role="tab" data-toggle="tab">By Category</a>
-                    </li>
-                  </ul>
-                  <!-- Tab panes -->
-                  <div id="navTabs" class="tab-content">
-                    <div  class="tab-pane active" id="tweet" role="tabpanel">
-                      <div id='watchData' class='col-md-12'>
-<div id="accordion">
-  <h3>Section 1</h3>
-  <div id='watchBoxOne' class='watchBox'><p>tweet info 1</p></div>
-  <h3>Section 2</h3>
-  <div id='watchBoxTwo' class='watchBox'><p>tweet info 2</p></div>
-  <h3>Section 3</h3>
-  <div id='watchBoxThree' class='watchBox'><p>tweet info 3</p></div>                
-</div>
-                      </div>
-                    </div>
-                    
-                    <div role="tabpanel" class="tab-pane" id="myList">
-                      <div id="accordionTwo" class="col-md-12">                    
-                          <h3 class="col-sm-2 section" style="margin-top:auto;margin-bottom:auto;">Section 1</h3>
-                           <div id='infoBoxOne' class='col-sm-9 watchBox'><p>Watch info 1</p></div>    
-                          <h3 class="col-sm-2 section" style="margin-top:auto;margin-bottom:auto;">Section 2</h3>
-                          <div id='infoBoxTwo' class='col-sm-9 watchBox' style='margin-top:-2.4em;'><p>Watch info 2</p></div> 
-                          <h3 class="col-sm-2 section" style="margin-top:auto;margin-bottom:auto;">Section 3</h3>
-                          <div id='infoBoxThree' class='col-sm-9 watchBox' style='margin-top:-4.8em;'><p>Watch info 3</p></div>                
-                      
-                      </div>
-                    </div>
-                    
-                    <div role="tabpanel" class="tab-pane" id="category">
-                      <div id="accordionThree">
-                        <h3>Section 1</h3>
-                        <div id='BoxOne' class='watchBox'><p>Box info 1</p></div>
-                        <h3>Section 2</h3>
-                        <div id='BoxTwo' class='watchBox'><p>Box info 2</p></div>
-                        <h3>Section 3</h3>
-                        <div id='BoxThree' class='watchBox'><p>Box info 3</p></div>                
-                      </div>
-                    
-                    
-                    </div>
-                  </div>
-              </div>
-
-              <!-- colum area for right data container -->
-              <div id='rightDataCol' class='col-md-6'>
-                <canvas id="myCanvas" width="600" height="500" style="border:1px solid #000000;background-color:white"></canvas>                        
-              </div>
-
-
-
+          <!-- search bar clicker -->
+          <div id='searchBarClick' class='col-xs-2'>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" value="Category">
+                Category
+                <span class="caret"/>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                <a href="#">Action</a>
+                </li>
+                <li>
+                <a href="#">Another action</a>
+                </li>
+                <li>
+                <a href="#">Something else here</a>
+                </li>
+                <li>
+                <a href="#">Separated link</a>
+                </li>
+              </ul>
             </div>
+          </div>
+          <div id='appNameCol' class='col-md-6'>
+            <h2 style="margin-top:auto;padding-left:2em;">Application</h2>
           </div>
         </div>
-
-
-        <script>
-        $('#myTabs a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-
-
-$('#myTabs a[href="#tweet"]').tab('show') // Select tab by name
-$('#myTabs a[href="#myList"]').tab('show') // Select tab by name
-$('#myTabs a[href="#category"]').tab('show') // Select tab by name
+      </div>
 
 
 
-        </script>
-        <script>
-$( "#accordion" ).accordion();
-$( "#accordionTwo").accordion();
-$( "#accordionThree").accordion();
-</script>
-      </body>
-    </html>
+      <!-- row for main data -->
+      <div id='mainDataRow' class='row'>
+        <!-- main data container -->
+        <div id='mainDataCol' class='col-md-12'>
+          <!-- colum area for left data container -->
+          <div id='leftDataCol' class='col-md-6'>
+           
+           <!-- meter data holder -->
+            <div id='meterData' class='col-md-12'>
+              <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;background-color:white;margin-left:4em;"></canvas>             
+            </div>
+            
+            <!-- Nav tabs -->
+            <ul id="navTabsTitle" class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#tweet" aria-controls="tweet" role="tab" data-toggle="tab">Related Tweets</a>
+              </li>
+              <li role="presentation">
+                <a href="#myList" aria-controls="myList" role="tab" data-toggle="tab">Watch List</a>
+              </li>
+              <li role="presentation">
+                <a href="#category" aria-controls="category" role="tab" data-toggle="tab">By Category</a>
+              </li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div id="navTabs" class="tab-content">
+              <div  class="tab-pane active" id="tweet" role="tabpanel">
+                <div id='watchData' class='col-md-12'>
+                  <div id="accordion">
+                    <h3>Section 1</h3>
+                    <div id='watchBoxOne' class='watchBox'><p>tweet info 1</p></div>
+                    <h3>Section 2</h3>
+                    <div id='watchBoxTwo' class='watchBox'><p>tweet info 2</p></div>
+                    <h3>Section 3</h3>
+                    <div id='watchBoxThree' class='watchBox'><p>tweet info 3</p></div>                
+                  </div>
+                </div>
+              </div>
+
+              <div role="tabpanel" class="tab-pane" id="myList">
+                <div id="accordionTwo" class="col-md-12">                    
+                  <h3 class="col-sm-2 section" style="margin-top:auto;margin-bottom:auto;">Section 1</h3>
+                  <div id='infoBoxOne' class='col-sm-9 watchBox'><p>Watch info 1</p></div>    
+                  <h3 class="col-sm-2 section" style="margin-top:auto;margin-bottom:auto;">Section 2</h3>
+                  <div id='infoBoxTwo' class='col-sm-9 watchBox' style='margin-top:-2.4em;'><p>Watch info 2</p></div> 
+                  <h3 class="col-sm-2 section" style="margin-top:auto;margin-bottom:auto;">Section 3</h3>
+                  <div id='infoBoxThree' class='col-sm-9 watchBox' style='margin-top:-4.8em;'><p>Watch info 3</p></div>                
+                </div>
+              </div>
+
+              <div role="tabpanel" class="tab-pane" id="category">
+                <div id="accordionThree">
+                  <h3>Section 1</h3>
+                  <div id='BoxOne' class='watchBox'><p>Box info 1</p></div>
+                  <h3>Section 2</h3>
+                  <div id='BoxTwo' class='watchBox'><p>Box info 2</p></div>
+                  <h3>Section 3</h3>
+                  <div id='BoxThree' class='watchBox'><p>Box info 3</p></div>                
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- colum area for right data container -->
+          <div id='rightDataCol' class='col-md-6'>
+            <canvas id="myCanvas" width="600" height="500" style="border:1px solid #000000;background-color:white"></canvas>                        
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+      })
+
+      $('#myTabs a[href="#tweet"]').tab('show') // Select tab by name
+      $('#myTabs a[href="#myList"]').tab('show') // Select tab by name
+      $('#myTabs a[href="#category"]').tab('show') // Select tab by name
+    </script>
+    <script>
+      $( "#accordion" ).accordion();
+      $( "#accordionTwo").accordion();
+      $( "#accordionThree").accordion();
+    </script>
+  </body>
+</html>
