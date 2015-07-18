@@ -5,23 +5,23 @@ font-size:100%!important;
 body{
 font-size:67%!important;
 margin: auto auto;
+background-color:silver;
 }
 
 
 
 #pageContainer{
-background-color:purple;
-height:40em;
 margin-top:1em;
 }
 
 #searchHeaderRow{
 height:5em;
-background-color:blue;
+
 }
 
 #mainDataRow{
 font-size:1em;
+background-color:lightgray;
 }
 
 #searchBarCol{
@@ -37,7 +37,6 @@ font-size:1em;
 }
 
 #appNameCol{
-background-color:pink;
 }
 
 #mainDataCol{
@@ -45,23 +44,28 @@ background-color:pink;
 }
 
 #meterData{
-background-color:yellow;
-height:22em;
+height:24em;
 }
 
 .watchBox{
-height:8em;
-background-color:pink;
+height:6.6em;
 }
 
-#watchData{
+#navTabsTitle{
+margin-left:25%;
+width:75%;
+}
 
+#navTabs{
+height:20em;
+}
+#watchData{
 }
 
 #leftDataCol{
-background-color:gray;
+
 }
 
 #rightDataCol{
-background-color:purple;
+height:47.5em;
 }
