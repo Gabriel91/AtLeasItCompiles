@@ -9,8 +9,10 @@ background-color:silver;
 min-width:58em;
 }
 
-.test{
+.section{
 clear:both;
+min-height:1.8em!important;
+
 }
 
 #pageContainer{
