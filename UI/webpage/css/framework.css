@@ -6,9 +6,12 @@ body{
 font-size:67%!important;
 margin: auto auto;
 background-color:silver;
+min-width:58em;
 }
 
-
+.test{
+clear:both;
+}
 
 #pageContainer{
 margin-top:1em;
@@ -44,7 +47,8 @@ font-size:1em;
 }
 
 #meterData{
-height:24em;
+height:auto;
+margin-top:1em;
 }
 
 .watchBox{
@@ -68,4 +72,5 @@ height:20em;
 
 #rightDataCol{
 height:47.5em;
+margin-top:1em;
 }

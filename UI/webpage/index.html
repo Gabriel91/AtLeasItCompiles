@@ -6,10 +6,15 @@
     <!--Style sheets (Bootstrap first) -->
 
     <link rel="stylesheet" type="text/css" href="css/framework.css">
-      <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-           <script src="jquery/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.theme.css">
+      
+         <script src="jquery/jquery.js"></script>
          <script src="jquery/jquery-ui.js"></script>
-      <script src="bootstrap/js/bootstrap.js"></script>
+         <script src="bootstrap/js/bootstrap.js"></script>
+      
         
     
        
@@ -21,9 +26,9 @@
           <!-- Search header row contains search bar and name of app -->
           <div id='searchHeaderRow' class='row'>
             <!-- column for search bar -->
-            <div id='searchBarCol' class='col-sm-6'>
+            <div id='searchBarCol' class='col-md-12'>
               <!-- search input box -->
-              <div id='searchBarInput' class='col-sm-8'>            
+              <div id='searchBarInput' class='col-xs-4'>            
                 <!-- input search box -->
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="searchTerm">
@@ -32,7 +37,7 @@
                 </div>
               </div>
               <!-- search bar clicker -->
-              <div id='searchBarClick' class='col-sm-4'>
+              <div id='searchBarClick' class='col-xs-2'>
                 <div class="dropdown">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" value="Category">
                     Category
@@ -54,10 +59,10 @@
                   </ul>
                 </div>
               </div>
-            </div>
 
-            <div id='appNameCol' class='col-sm-6'>
+            <div id='appNameCol' class='col-xs-6'>
               <p>App Name</p>
+            </div>
             </div>
 
           </div>
@@ -72,7 +77,7 @@
               <div id='leftDataCol' class='col-md-6'>
                 <!-- meter data holder -->
                 <div id='meterData' class='col-md-12'>
-                  <p>Meter plus score</p>              
+                  <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;background-color:white;margin-left:4em;"></canvas>             
                 </div>
                   <!-- Nav tabs -->
                   <ul id="navTabsTitle" class="nav nav-tabs" role="tablist">
@@ -86,25 +91,59 @@
                       <a href="#category" aria-controls="category" role="tab" data-toggle="tab">By Category</a>
                     </li>
                   </ul>
-                  
                   <!-- Tab panes -->
                   <div id="navTabs" class="tab-content">
                     <div  class="tab-pane active" id="tweet" role="tabpanel">
                       <div id='watchData' class='col-md-12'>
-                        <div id='watchBoxOne' class='watchBox col-sm-12'>tweet info 1</div>
-                        <div id='watchBoxTwo' class='watchBox col-sm-12'>tweet info 2</div>
-                        <div id='watchBoxThree' class='watchBox col-sm-12'>tweet info 3</div>                
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div id='watchBoxOne' class='watchBox'><p>tweet info 1</p></div>
+  <h3>Section 2</h3>
+  <div id='watchBoxTwo' class='watchBox'><p>tweet info 2</p></div>
+  <h3>Section 3</h3>
+  <div id='watchBoxThree' class='watchBox'><p>tweet info 3</p></div>                
+</div>
+
+
+                      
+                      
+                      
+                        
+                        
+                        
                       </div>
                     </div>
                     
-                    <div role="tabpanel" class="tab-pane" id="myList">...</div>
-                    <div role="tabpanel" class="tab-pane" id="category">...</div>
+                    <div role="tabpanel" class="tab-pane" id="myList">
+                      <div id="accordionTwo" class="col-md-12">                    
+                          <h3 class="col-sm-2 test">Section 1</h3>
+                           <div id='infoBoxOne' class='col-sm-10 watchBox'><p>Watch info 1</p></div>    
+                          <h3 class="col-sm-2 test">Section 2</h3>
+                          <div id='infoBoxTwo' class='col-sm-10 watchBox' style='margin-top:-2.4em;'><p>Watch info 2</p></div> 
+                          <h3 class="col-sm-2 test">Section 3</h3>
+                          <div id='infoBoxThree' class='col-sm-10 watchBox' style='margin-top:-4.8em;'><p>Watch info 3</p></div>                
+                      
+                      </div>
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane" id="category">
+                      <div id="accordionThree">
+                        <h3>Section 1</h3>
+                        <div id='BoxOne' class='watchBox'><p>Box info 1</p></div>
+                        <h3>Section 2</h3>
+                        <div id='BoxTwo' class='watchBox'><p>Box info 2</p></div>
+                        <h3>Section 3</h3>
+                        <div id='BoxThree' class='watchBox'><p>Box info 3</p></div>                
+                      </div>
+                    
+                    
+                    </div>
                   </div>
               </div>
 
               <!-- colum area for right data container -->
               <div id='rightDataCol' class='col-md-6'>
-                <p>Graph Area</p>            
+                <canvas id="myCanvas" width="600" height="550" style="border:1px solid #000000;background-color:white"></canvas>                        
               </div>
 
 
@@ -126,6 +165,12 @@ $('#myTabs a[href="#myList"]').tab('show') // Select tab by name
 $('#myTabs a[href="#category"]').tab('show') // Select tab by name
 
 
+
         </script>
+        <script>
+$( "#accordion" ).accordion();
+$( "#accordionTwo").accordion();
+$( "#accordionThree").accordion();
+</script>
       </body>
     </html>
