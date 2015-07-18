@@ -1,8 +1,9 @@
 html{
-margin-top:2em;
+margin-top:1em;
+font-size:100%!important;
 }
 body{
-font-size:97%;
+font-size:67%!important;
 margin: auto auto;
 background-color:silver;
 }
