@@ -4,15 +4,21 @@
     <title>Homepage</title>
 
     <!--Style sheets (Bootstrap first) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    
     <link rel="stylesheet" type="text/css" href="css/framework.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" type="text/css" href="bootstrap/js/bootstrap.min.js">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
     </head>
 
     <body>
       <!-- Container for Application -->
-      <div class='container'>
+      <div id='pageContainer' class='container'>
         <!-- Search header row contains search bar and name of app -->
         <div id='searchHeaderRow' class='row'>
           <!-- column for search bar -->
@@ -25,11 +31,29 @@
                   <span class="input-group-addon" id="basic-addon2">Keyword</span>
                 </input>
               </div>
-
             </div>
             <!-- search bar clicker -->
             <div id='searchBarClick' class='col-sm-4' style="background-color:blue;">
-              <p>Clicker</p>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+                  <span class="caret"/>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li>
+                    <a href="#">Action</a>
+                  </li>
+                  <li>
+                    <a href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a href="#">Something else here</a>
+                  </li>
+                  <li>
+                    <a href="#">Separated link</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
