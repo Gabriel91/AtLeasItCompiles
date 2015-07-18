@@ -19,6 +19,16 @@ background-color:purple;
 #searchBarCol{
 font-size:1em;
 background-color:orange;
+
+}
+
+#searchBarClick{
+font-size:1em;
+margin-top:.7em;
+}
+
+#searchBarInput{
+margin-top:.4em;
 }
 
 #appNameCol{
