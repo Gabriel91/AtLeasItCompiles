@@ -1,5 +1,9 @@
+html{
+margin-top:2em;
+}
 body{
 font-size:97%;
+margin: auto auto;
 }
 
 #searchHeaderRow{
@@ -15,7 +19,6 @@ background-color:purple;
 #searchBarCol{
 font-size:1em;
 background-color:orange;
-
 }
 
 #appNameCol{
