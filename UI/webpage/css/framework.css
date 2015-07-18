@@ -5,14 +5,13 @@ font-size:100%!important;
 body{
 font-size:67%!important;
 margin: auto auto;
-background-color:silver;
 }
 
 
 
 #pageContainer{
 background-color:purple;
-height:60em;
+height:40em;
 margin-top:1em;
 }
 
@@ -23,7 +22,6 @@ background-color:blue;
 
 #mainDataRow{
 font-size:1em;
-background-color:purple;
 }
 
 #searchBarCol{
@@ -43,25 +41,27 @@ background-color:pink;
 }
 
 #mainDataCol{
-background-color:silver;
 
 }
 
 #meterData{
 background-color:yellow;
-
+height:22em;
 }
+
+.watchBox{
+height:8em;
+background-color:pink;
+}
+
 #watchData{
-background-color:green;
 
 }
 
 #leftDataCol{
-
 background-color:gray;
 }
 
 #rightDataCol{
-
 background-color:purple;
 }
