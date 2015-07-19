@@ -1,41 +1,37 @@
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.Normalizer;
-import java.util.*;
-import java.util.regex.Pattern;
+
+//"{\"johnny is a great guy\":\"tweet1\",\"billy is a bad boy\":\"tweet2\"} "
 
 public class TweetToquenizer {
 
-	public void readFileIntoArrayList() throws IOException {
+	public String readFileIntoArrayList() throws IOException {
 		FileReader twitterFile = null;
 		String line = null;
+		int tweetNumber = 1;
+		String jsonObj = "{";
 		try {
 			twitterFile = new FileReader(
 					"..//DateTime/src/TwitterData/BasicTwitter.txt");
 			BufferedReader br = new BufferedReader(twitterFile);
 			while ((line = br.readLine()) != null) {
-				System.out.println(line);
+//				System.out.println(line);
+				if (tweetNumber != 1) {
+					jsonObj += ",";
+				}
+				jsonObj += '"' + br.readLine() + '"' + ":" + '"' + "tweet" + tweetNumber + '"';
+				tweetNumber++;
+				
 			}
+			jsonObj += "}";
+			System.out.println(jsonObj);
 			twitterFile.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return jsonObj;
 	}
-	/*
-	 * try { scanner = new Scanner(twitterFile); } catch (FileNotFoundException
-	 * e) { // TODO Auto-generated catch block e.printStackTrace(); }
-	 * ArrayList<String> list = new ArrayList<String>(); while
-	 * (scanner.hasNextLine()) { System.out.println(scanner.hasNext()); String
-	 * english = deAccent(scanner.nextLine()); System.out.println(english);
-	 * list.add(english); } scanner.close(); return list; }
-	 * 
-	 * public String deAccent(String str) { String nfdNormalizedString =
-	 * Normalizer.normalize(str, Normalizer.Form.NFD); Pattern pattern =
-	 * Pattern.compile("\\p{InCombiningDiacriticalMarks}+"); return
-	 * pattern.matcher(nfdNormalizedString).replaceAll(""); }
-	 */
 }
