@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE HTML>
 <html lang='en'>
   <head>
@@ -16,6 +18,7 @@
   </head>
 
   <body>
+  <form action="${pageContext.request.contextPath}/TweetAnalysis" method="post">
     <!-- Container for Application -->
     <div id='pageContainer' class='container-fluid'>
       <!-- Search header row contains search bar and name of app -->
@@ -26,9 +29,10 @@
           <div id='searchBarInput' class='col-xs-4'>            
             <!-- input search box -->
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="searchTerm">
-                <span class="input-group-addon" id="basic-addon2">Keyword</span>
-              </input>
+              <input name="searchKey" type="text" class="form-control" placeholder="searchTerm" /> 
+            
+                <input type="submit" class="input-group-addon" id="basic-addon2">Keyword</input>
+             
             </div>
           </div>
           <!-- search bar clicker -->
@@ -74,7 +78,9 @@
 
            <!-- meter data holder -->
             <div id='meterData' class='col-md-12'>
-              <canvas id="meterCanvas" width="500" height="300" style="border:1px solid #000000;background-color:white;margin-left:4em;"></canvas>             
+              <div id="meterCanvas" width="500" height="300" style="border:1px solid #000000;background-color:white;margin-left:4em;">
+             <p>  ${TC}</p>
+              </div>             
             </div>
 
             <!-- Nav tabs -->
@@ -156,12 +162,15 @@
 
           <!-- colum area for right data container -->
           <div id='rightDataCol' class='col-md-6'>
-            <canvas id="graphCanvas" width="600" height="500" style="border:1px solid #000000;background-color:white"></canvas>                        
+            <canvas id="graphCanvas" width="600" height="500" style="border:1px solid #000000;background-color:white">
+            <p> ${TC}</p>
+            </canvas>                        
           </div>
 
         </div>
       </div>
     </div>
+    </form>
     <script>
       $('#myTabs a').click(function (e) {
       e.preventDefault()

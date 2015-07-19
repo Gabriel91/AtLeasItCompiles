@@ -16,6 +16,7 @@
   </head>
 
   <body>
+  <form action="${pageContext.request.contextPath}/TwitterServlet" method="post">
     <!-- Container for Application -->
     <div id='pageContainer' class='container-fluid'>
       <!-- Search header row contains search bar and name of app -->
@@ -26,9 +27,9 @@
           <div id='searchBarInput' class='col-xs-4'>            
             <!-- input search box -->
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="searchTerm">
-                <span class="input-group-addon" id="basic-addon2">Keyword</span>
-              </input>
+              <input id="searchKey" type="text" class="form-control" placeholder="searchTerm"></input>
+                <input type="submit" class="input-group-addon" id="basic-addon2">Keyword</input>
+             
             </div>
           </div>
           <!-- search bar clicker -->
@@ -153,7 +154,7 @@
             </div>
           </div>
           </div>
-
+</form>
           <!-- colum area for right data container -->
           <div id='rightDataCol' class='col-md-6'>
             <canvas id="graphCanvas" width="600" height="500" style="border:1px solid #000000;background-color:white"></canvas>                        
