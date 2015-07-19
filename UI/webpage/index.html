@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.structure.css">
     <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.theme.css">      
+    <script type='application/javascript' language='javascript'></script>
     <script src="jquery/jquery.js"></script>
     <script src="jquery/jquery-ui.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
@@ -70,7 +71,7 @@
            
            <!-- meter data holder -->
             <div id='meterData' class='col-md-12'>
-              <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;background-color:white;margin-left:4em;"></canvas>             
+              <canvas id="meterCanvas" width="500" height="300" style="border:1px solid #000000;background-color:white;margin-left:4em;"></canvas>             
             </div>
             
             <!-- Nav tabs -->
@@ -127,7 +128,7 @@
 
           <!-- colum area for right data container -->
           <div id='rightDataCol' class='col-md-6'>
-            <canvas id="myCanvas" width="600" height="500" style="border:1px solid #000000;background-color:white"></canvas>                        
+            <canvas id="graphCanvas" width="600" height="500" style="border:1px solid #000000;background-color:white"></canvas>                        
           </div>
 
         </div>
@@ -147,6 +148,16 @@
       $( "#accordion" ).accordion();
       $( "#accordionTwo").accordion();
       $( "#accordionThree").accordion();
+       
+      window.onload= draw;
+      function draw() {
+        var canvas = document.getElementById("meterCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "rgba(0,200,0,1)";
+        ctx.fillRect(80,30,100,300);
+        ctx.fillRect(250,80,90,200);
+      }
     </script>
+    
   </body>
 </html>
