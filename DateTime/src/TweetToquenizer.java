@@ -7,31 +7,19 @@ import java.io.IOException;
 
 public class TweetToquenizer {
 
-	public String readFileIntoArrayList() throws IOException {
-		FileReader twitterFile = null;
-		String line = null;
-		int tweetNumber = 1;
+	public String readFileIntoArrayList(int tweetNumber, BufferedReader br)
+			throws IOException {
+
 		String jsonObj = "{";
-		try {
-			twitterFile = new FileReader(
-					"..//DateTime/src/TwitterData/BasicTwitter.txt");
-			BufferedReader br = new BufferedReader(twitterFile);
-			while ((line = br.readLine()) != null) {
-//				System.out.println(line);
-				if (tweetNumber != 1) {
-					jsonObj += ",";
-				}
-				jsonObj += '"' + br.readLine() + '"' + ":" + '"' + "tweet" + tweetNumber + '"';
-				tweetNumber++;
-				
-			}
-			jsonObj += "}";
-			System.out.println(jsonObj);
-			twitterFile.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (tweetNumber != 1 && ((tweetNumber & 1) == 0)) {
+//			jsonObj += ",";
+		} else {
+			jsonObj += "}, {";
 		}
+		jsonObj += '"' + br.readLine() + '"' + ":" + '"' + "tweet"
+				+ tweetNumber + '"';
+		jsonObj += "}";
+		System.out.println(jsonObj);
 		return jsonObj;
 	}
 }
