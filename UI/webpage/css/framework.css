@@ -1,52 +1,72 @@
 html{
-margin-top:2em;
+margin-top:1em;
+font-size:100%!important;
 }
 body{
-font-size:97%;
+font-size:67%!important;
 margin: auto auto;
+min-width:58em;
+}
+
+.section{
+clear:both;
+min-height:1.8em!important;
+}
+
+#pageContainer{
+margin-top:1em;
 }
 
 #searchHeaderRow{
-font-size:1em;
-background-color:red;
+height:5em;
+}
+
+
+#graphCanvas{
+margin-top:2em;
 }
 
 #mainDataRow{
 font-size:1em;
-background-color:purple;
+background-color:#BFC7C9;
 }
 
 #searchBarCol{
 font-size:1em;
-background-color:orange;
 }
 
-#appNameCol{
-font-size:1em;
-background-color:pink;
-
+#navTabsTitle li{
+background-color:white;
+margin-right:.2em;
+ border-style: solid;
+    border-width: .1em;
+    border-color: grey;
 }
 
-#mainDataCol{
-background-color:silver;
 
+
+.myClass{
+margin-top:.5em;
+margin-bottom:.5em;
+height:50em;
+background-color:#E8E8E8;
+ border-style: solid;
+    border-width: .1em;
+    border-color:black;
 }
 
 #meterData{
-background-color:yellow;
-
-}
-#watchData{
-background-color:green;
-
+height:auto;
+margin-top:1em;
 }
 
-#leftDataCol{
-
-background-color:gray;
+#navTabsTitle{
+margin-left:20%;
+width:75%;
 }
+
 
 #rightDataCol{
-
-background-color:purple;
+height:47.5em;
+margin-top:1em;
 }
