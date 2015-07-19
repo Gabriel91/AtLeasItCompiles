@@ -46,7 +46,7 @@ public class DateTime {
 			List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
 
 			   
-			    urlParameters.add(new BasicNameValuePair("txt", "he is bad"));
+			    urlParameters.add(new BasicNameValuePair("txt", "he is great yet stupid"));
 			   
 			    post.setEntity(new UrlEncodedFormEntity(urlParameters));
 			    
@@ -60,7 +60,6 @@ public class DateTime {
 		while ((line = rd.readLine()) != null) {
 			result.append(line);
 		}
- 
 		System.out.println(result.toString());
 			
 		
